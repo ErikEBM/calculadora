@@ -64,5 +64,32 @@ $boton.onclick = function(e){
        $resultado.value += "."; 
          }
     }
+    if(at === "sumar"){
+        $resultado.value += " + ";         
+
+    }
+    
+    if(at === "multiplicacion"){
+        
+        $resultado.value += " x ";         
+
+    }
+    if(at === "division"){
+        $resultado.value += " ÷ ";         
+
+    }
+    if(at === "resta"){
+        $resultado.value += " - ";         
+
+    }
+
+    if(at === "igual"){
+        
+        let ch = $resultado.value.replace(/x/g,"*")
+        $resultado.value = eval(ch.replace(/÷/g, "/"))
+
+    }
+
+
 
 }
